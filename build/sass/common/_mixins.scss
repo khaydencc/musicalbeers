@@ -1,0 +1,11 @@
+
+
+@mixin bg_honeycomb($primary: #fb1, $secondary: #b71) {
+  background:
+          radial-gradient(circle farthest-side at 0% 50%,$primary 23.5%,rgba(240,166,17,0) 0)21px 30px,
+          radial-gradient(circle farthest-side at 0% 50%,$secondary 24%,rgba(240,166,17,0) 0)19px 30px,
+          linear-gradient($primary 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,$primary 0)0 0,
+          linear-gradient(150deg,$primary 24%,$secondary 0,$secondary 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,$secondary 0,$secondary 76%,$primary 0)0 0,
+          linear-gradient(30deg,$primary 24%,$secondary 0,$secondary 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,$secondary 0,$secondary 76%,$primary 0)0 0,
+          linear-gradient(90deg,$secondary 2%,$primary 0,$primary 98%,$secondary 0%)0 0 $primary;
+}

@@ -1,0 +1,35 @@
+
+.component-photo-album {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+  grid-gap: 1em;
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+
+  figure {
+    margin: 0;
+    //max-width: 250px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+
+    /*@media screen and (min-width: 400px) {
+      max-width: none;
+    }*/
+
+    img {
+      display: block;
+      width: 100%;
+      //height: 100%;
+
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      object-fit: cover;
+
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "presets": [
+    "react",
+    [
+      "env", {
+        "targets" : {
+          "browsers": ["> 4%", "ie 11"],
+          "node": "4.2.3"
+      },
+      "exclude": [
+        "transform-regenerator",
+        "transform-async-to-generator",
+        "transform-exponentiation-operator",
+        "transform-es2015-for-of"
+      ],
+      "include": [
+        "es6.array.from",
+        "es6.set",
+        "es6.map"
+      ],
+      "useBuiltIns": "usage",
+      "modules": false
+    }]
+  ],
+  "plugins": [
+    "transform-class-properties"
+  ]
+}

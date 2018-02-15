@@ -1,0 +1,21 @@
+{
+  "title": "Random stuff around NYC",
+  "path": "/nyc",
+  "photos": [
+    {
+      "filename": "IMG_20171129_211505_811.jpg",
+      "title": "this is a title",
+      "description": "hey there, I'm a description"
+    },
+    {
+      "filename": "IMG_20171130_121728.jpg",
+      "title": "check this out",
+      "description": "hey there, I'm a description"
+    },
+    {
+      "filename": "IMG_20171204_223435_008.jpg",
+      "title": "What's happening here?",
+      "description": "hey there, I'm a description"
+    }
+  ]
+}

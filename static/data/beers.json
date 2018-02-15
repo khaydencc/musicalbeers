@@ -1,0 +1,41 @@
+{
+  "title": "",
+  "beers": [
+    {
+      "id": 0,
+      "name": "TEST",
+      "type": "TEST",
+      "subtype": "",
+      "image": "",
+      "rating": 0,
+      "brewery": "TEST"
+    },
+    {
+      "id": 1,
+      "name": "Captan Lawrence Freschester Pale Ale",
+      "type": "pale ale",
+      "subtype": "American Pale Ale",
+      "image": "28303.jpg",
+      "rating": 3.48,
+      "brewery": "Captan Lawrence Brewing Co."
+    },
+    {
+      "id": 2,
+      "name": "Samuel Adams Boston Lager",
+      "type": "lager",
+      "subtype": "vienna lager",
+      "image": "104.jpg",
+      "rating": 3.74,
+      "brewery": "Boston Beer Company"
+    },
+    {
+      "id": 3,
+      "name": "Guinness Draught",
+      "type": "stout",
+      "subtype": "dry irish stout",
+      "image": "754.jpg",
+      "rating": 3.56,
+      "brewery": "Guinness Ltd."
+    }
+  ]
+}
