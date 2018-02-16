@@ -1,5 +1,6 @@
 import React from "react";
 import Configs from "core/config";
+import ArtistComponent from "components/ArtistComponent";
 
 
 export default class ArtistList extends React.Component {
@@ -14,7 +15,9 @@ export default class ArtistList extends React.Component {
 
         return <div className="component-artistlist">
             {this.props.artists.map((artist, index, arr) =>
-                <p key={index}>{ artist.name }</p>
+                <ArtistComponent
+                    {...artist}
+                    key={index}/>
             )}
         </div>
     }
