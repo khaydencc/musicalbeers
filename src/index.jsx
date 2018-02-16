@@ -36,6 +36,7 @@ class App extends React.Component {
 
         this.getArtists = this.getArtists.bind(this);
 
+        this.closeArtists = this.closeArtists.bind(this);
     }
 
     componentWillMount() {
@@ -62,6 +63,13 @@ class App extends React.Component {
         });
     }
 
+    closeArtists() {
+        this.setState({
+            showBeers: true,
+            showArtists: false
+        });
+    }
+
     getArtists(beerType) {
         console.log("[getArtists] beerType = %o", beerType);
         console.log("[getArtists] pairing = %o", dataSet.pairings[beerType]);
@@ -85,7 +93,7 @@ class App extends React.Component {
 
     render(){
 
-        let artistOverlay = (this.state.artists) ? <ArtistList artists={this.state.artists} show={true}/> : null;
+        let artistOverlay = (this.state.artists) ? <ArtistList artists={this.state.artists} show={true} close={this.closeArtists}/> : null;
 
         return(
             <div className="app-container">

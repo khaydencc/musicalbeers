@@ -19,11 +19,6 @@ export default class ArtistComponent extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    closeArtists(_event) {
-        _event.preventDefault();
-
-    }
-
     handleClick(_event) {
         _event.preventDefault();
 

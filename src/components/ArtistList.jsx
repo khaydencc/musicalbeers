@@ -14,6 +14,10 @@ export default class ArtistList extends React.Component {
     render() {
 
         return <div className="component-artistlist">
+            <div className="actions">
+                <button onClick={this.props.close}>back</button>
+            </div>
+
             {this.props.artists.map((artist, index, arr) =>
 
                 <ArtistComponent
