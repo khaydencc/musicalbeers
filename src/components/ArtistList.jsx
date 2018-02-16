@@ -15,6 +15,7 @@ export default class ArtistList extends React.Component {
 
         return <div className="component-artistlist">
             {this.props.artists.map((artist, index, arr) =>
+
                 <ArtistComponent
                     {...artist}
                     key={index}/>

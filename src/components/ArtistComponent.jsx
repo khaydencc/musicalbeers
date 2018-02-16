@@ -4,7 +4,7 @@ import Configs from "core/config";
 export default class ArtistComponent extends React.Component {
 
     static defaultProps = {
-        artistId: 0,
+        artistid: 0,
         name: "artist name"
     };
 
@@ -12,10 +12,11 @@ export default class ArtistComponent extends React.Component {
         super(props);
 
         //http://i.iheart.com/v3/catalog/artist/30960173?ops=fit(200,0)
-        this.image_path = `http://i.iheart.com/v3/catalog/artist/${this.props.artistId}`;
+        this.image_path = `http://i.iheart.com/v3/catalog/artist/${this.props.artistid}`;
         //https://www.iheart.com/artist/french-montana-281545/
-        this.url = `https://www.iheart.com/artist/-${this.props.artistId}`;
+        this.url = `https://www.iheart.com/artist/-${this.props.artistid}`;
 
+        this.handleClick = this.handleClick.bind(this);
     }
 
     closeArtists(_event) {
