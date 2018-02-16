@@ -48,16 +48,13 @@ class App extends React.Component {
 
     componentWillMount() {
         console.log("[App:componentWillMount:]");
-        user.getStatus(this.onStatus);
+        // user.getStatus(this.onStatus);
     }
 
     render(){
         return(
             <div className="app-container">
-                <p>like beer?</p>
-                <LoginButton loggedin={this.state.loggedin} getUser={this.getUser}/>
                 <BeerList/>
-
             </div>
         )
     }

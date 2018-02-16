@@ -17,6 +17,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../src/index.html'));
 });
 
+/*app.get('/artists-by-beer', function (req, res) {
+    res.sendFile(path.join(__dirname, '../src/artists-by-beer.html'));
+});*/
+
 app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath

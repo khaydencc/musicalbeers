@@ -34,11 +34,12 @@ export default class BeerComponent extends React.Component {
                 <img src={this.image_path} />
             </div>
             <figcaption>
-                <ul>
-                    <li>{this.props.name}</li>
-                    <li>by {this.props.brewery}</li>
-                    <li>{this.props.type}</li>
-                    <li>{this.props.rating}</li>
+                <ul className="beer-info">
+                    <li className="beer-name">{this.props.name}</li>
+                    <li className="beer-brewery">by {this.props.brewery}</li>
+                    <li className="beer-type">{this.props.type}</li>
+                    <li className="beer-abv">ABV: {this.props.abv}%</li>
+                    <li className="beer-rating">Ba: {this.props.rating}</li>
                 </ul>
             </figcaption>
         </figure>

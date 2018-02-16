@@ -1,0 +1,72 @@
+
+.component-beer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(gray, .1);
+  min-width: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #aaa;
+
+  .thumb-container {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    //padding: 10px;
+    border: 1px solid #aaa;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  figcaption {
+
+    ul {
+      list-style: none;
+      padding: 5px 0;
+      margin: 0;
+
+      display: grid;
+      grid-row-gap: 20px;
+      grid-column-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "name name"
+                           "brewery brewery"
+                           "type type"
+                           "abv rating";
+
+      .beer-name {
+        grid-area: name;
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .beer-brewery {
+        grid-area: brewery;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .beer-type {
+        grid-area: type;
+      }
+      .beer-abv {
+        grid-area: abv;
+        font-weight: 600;
+        color: darkviolet;
+      }
+      .beer-rating {
+        grid-area: rating;
+        color: darkgreen;
+        font-weight: 600;
+      }
+
+    }
+  }
+}

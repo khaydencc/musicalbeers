@@ -33,7 +33,7 @@ export default class BeerList extends React.Component {
 
     render() {
 
-        return <div>
+        return <div className="component-beerlist">
             {this.state.beers.map((beer, index, arr) =>
                 <BeerComponent
                     {...beer}
