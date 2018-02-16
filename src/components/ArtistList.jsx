@@ -23,9 +23,10 @@ export default class ArtistList extends React.Component {
         let ele_class = `component-artistlist ${showHide}`;
 
         return <div className={ele_class}>
-            <div className="actions">
-                <button onClick={this.props.close}>back</button>
-            </div>
+            <header className="actions">
+                <button onClick={this.props.close}>X</button>
+                <h2>{this.props.beertype}</h2>
+            </header>
 
             {this.props.artists.map((artist, index, arr) =>
 

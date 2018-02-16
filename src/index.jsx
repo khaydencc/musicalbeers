@@ -14,7 +14,8 @@ const defaultState = {
     artists: [],
     pairings: [],
     showBeers: true,
-    showArtists: false
+    showArtists: false,
+    beertype: ""
 };
 
 let dataSet = {
@@ -67,7 +68,8 @@ class App extends React.Component {
         this.setState({
             showBeers: true,
             artists: [],
-            showArtists: false
+            showArtists: false,
+            beertype: ""
         });
     }
 
@@ -86,7 +88,8 @@ class App extends React.Component {
         this.setState({
             artists: artists,
             showBeers: false,
-            showArtists: true
+            showArtists: true,
+            beertype: beerType
         });
 
         console.log("[getArtists] artists = %o", artists);
@@ -94,7 +97,11 @@ class App extends React.Component {
 
     render(){
 
-        let artistOverlay = (this.state.artists) ? <ArtistList artists={this.state.artists} show={this.state.showArtists} close={this.closeArtists}/> : null;
+        let artistOverlay = (this.state.artists) ? <ArtistList
+                                                        artists={this.state.artists}
+                                                        show={this.state.showArtists}
+                                                        beertype={this.state.beertype}
+                                                        close={this.closeArtists}/> : null;
 
         return(
             <div className="app-container">
