@@ -5,7 +5,8 @@ export default class ArtistComponent extends React.Component {
 
     static defaultProps = {
         artistid: 0,
-        name: "artist name"
+        name: "artist name",
+        thumb: ""
     };
 
     constructor (props) {
@@ -33,6 +34,9 @@ export default class ArtistComponent extends React.Component {
     render() {
 
         let image_path = `http://i.iheart.com/v3/catalog/artist/${this.props.artistid}`;
+        if (this.props.artistid == 0 && this.props.thumb.length > 0) {
+            image_path = `${Configs.base_static_path}${Configs.base_photos_path}/artists/${this.props.thumb}`;
+        }
 
         return <figure className="component-artist">
             <div className="thumb-container">

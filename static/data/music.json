@@ -129,6 +129,11 @@
       "name": "Alanis Morissette"
     },
     {
+      "artistid": 0,
+      "name": "Robin Sparkles",
+      "thumb": "sparkles.jpg"
+    },
+    {
       "artistid": 44512,
       "name": "Drake"
     }
