@@ -16,3 +16,10 @@ body {
   grid-gap: 1em;
   padding: 1em;
 }
+
+.hidden {
+  background-color: rgba(red, .5);
+  //display: none;
+  visibility: hidden;
+  height: 0;
+}

@@ -22,16 +22,28 @@ export default class BeerComponent extends React.Component {
         if (this.props.image.trim() == "") {
             this.image_path = `${Configs.base_static_path}${Configs.base_photos_path}/beers/${defaultImage}`;
         }
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(_event) {
+        _event.preventDefault();
+        // let target = _event.currentTarget;
+        // let type = target.data("type");
+        console.log("[BeerComponent:handleClick:] type = %o", this.props.type);
+        this.props.getArtists(this.props.type);
     }
 
 
     render() {
 
-        console.log("[BeerComponent:render:] props = %o", this.props);
+        // console.log("[BeerComponent:render:] props = %o", this.props);
 
         return <figure className="component-beer">
             <div className="thumb-container">
+                <a href="#" onClick={this.handleClick}>
                 <img src={this.image_path} />
+                </a>
             </div>
             <figcaption>
                 <ul className="beer-info">

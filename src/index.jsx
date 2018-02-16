@@ -12,6 +12,14 @@ import ArtistList from "components/ArtistList";
 const defaultState = {
     beers: [],
     artists: [],
+    pairings: [],
+    showBeers: true,
+    showArtists: false
+};
+
+let dataSet = {
+    beers: [],
+    artists: [],
     pairings: []
 };
 
@@ -25,6 +33,8 @@ class App extends React.Component {
         this.state = defaultState;
 
         this.dataLoaded = this.dataLoaded.bind(this);
+
+        this.getArtists = this.getArtists.bind(this);
 
     }
 
@@ -46,26 +56,45 @@ class App extends React.Component {
     }
 
     dataLoaded(data) {
-        this.setState(data);
-    }
-
-    fetchBeers() {
-        const request = Fetcher.beerList();
-
-        request.then((result) => {
-            console.log("request SUCCESS! %o", result.data);
-
-            this.setState({
-                beers: result.data.beers
-            });
+        dataSet = data;
+        this.setState({
+            beers: data.beers
         });
     }
 
+    getArtists(beerType) {
+        console.log("[getArtists] beerType = %o", beerType);
+        console.log("[getArtists] pairing = %o", dataSet.pairings[beerType]);
+
+        let pairs = dataSet.pairings[beerType];
+
+        let artists = dataSet.artists.map((artist) => {
+            return pairs.includes(artist.artistid) ? artist : null;
+        }).filter((thing) => {
+            return thing === null ? false : thing;
+        });
+
+        this.setState({
+            artists: artists,
+            showBeers: false,
+            showArtists: true
+        });
+
+        console.log("[getArtists] artists = %o", artists);
+    }
+
     render(){
+
+        let artistOverlay = (this.state.artists) ? <ArtistList artists={this.state.artists} show={true}/> : null;
+
         return(
             <div className="app-container">
-                <BeerList beers={this.state.beers}/>
-                <ArtistList/>
+                <BeerList
+                    beers={this.state.beers}
+                    show={this.state.showBeers}
+                    getArtists={this.getArtists}
+                    />
+                { artistOverlay }
             </div>
         )
     }
