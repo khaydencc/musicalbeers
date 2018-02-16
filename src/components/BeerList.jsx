@@ -9,7 +9,8 @@ import BeerComponent from "components/BeerComponent";
 export default class BeerList extends React.Component {
 
     static defaultProps = {
-        beers: []
+        beers: [],
+        show: true
     };
 
     constructor (props) {

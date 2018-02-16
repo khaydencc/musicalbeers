@@ -66,6 +66,7 @@ class App extends React.Component {
     closeArtists() {
         this.setState({
             showBeers: true,
+            artists: [],
             showArtists: false
         });
     }
@@ -93,7 +94,7 @@ class App extends React.Component {
 
     render(){
 
-        let artistOverlay = (this.state.artists) ? <ArtistList artists={this.state.artists} show={true} close={this.closeArtists}/> : null;
+        let artistOverlay = (this.state.artists) ? <ArtistList artists={this.state.artists} show={this.state.showArtists} close={this.closeArtists}/> : null;
 
         return(
             <div className="app-container">

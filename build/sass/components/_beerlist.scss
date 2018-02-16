@@ -1,7 +1,13 @@
 
 .component-beerlist {
+  //margin: auto;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  justify-content: center;
+  //grid-template-columns: repeat(auto-fill, 250px);
+  //justify-content: center;
+
+  background-color: rgba(blue, .75); // fpo
+
+  width: 100%;
 }

@@ -5,6 +5,11 @@ import ArtistComponent from "components/ArtistComponent";
 
 export default class ArtistList extends React.Component {
 
+    static defaultProps = {
+        artists: [],
+        show: false
+    };
+
     constructor (props) {
         super(props);
 
@@ -13,7 +18,11 @@ export default class ArtistList extends React.Component {
 
     render() {
 
-        return <div className="component-artistlist">
+        let showHide = (this.props.show) ? "" : "hidden";
+
+        let ele_class = `component-artistlist ${showHide}`;
+
+        return <div className={ele_class}>
             <div className="actions">
                 <button onClick={this.props.close}>back</button>
             </div>

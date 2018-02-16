@@ -3,7 +3,11 @@
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  justify-content: center;
+  //justify-content: center;
+
+  background-color: rgba(green, .75); // fpo
+
+  width: 100%;
 
   > .actions {
     grid-column: 1 / -1;
