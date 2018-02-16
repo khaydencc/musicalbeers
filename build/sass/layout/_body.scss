@@ -10,24 +10,18 @@ body {
 }
 
 .app-container {
-  background-color: red; // fpo
-  //min-height: 100vh;
-  //max-width: 100vw;
+  //background-color: red; // fpo
   width: 100%;
-  //max-width: 1090px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  //grid-gap: 1em;
-  //padding: 10px;
   margin: auto;
 }
 
 .hidden {
-  background-color: rgba(red, .5);
-  //display: none;
-  visibility: hidden;
-  height: 0;
+  display: none !important;
+  //visibility: hidden;
+  //height: 0;
 }
 
 figure {

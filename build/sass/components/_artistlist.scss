@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  background-color: rgba(green, .75); // fpo
+  //background-color: rgba(green, .75); // fpo
 
   //width: 100%;
   padding: 10px;
@@ -22,5 +22,21 @@
 
   > .actions {
     grid-column: 1 / -1;
+
+    button {
+      font-family: var(--primary-font-family);
+      font-size: 16px;
+      font-weight: 600;
+      background-color: #ffdba1;
+      padding: 10px;
+      border-radius: 10px;
+      border-style: solid;
+      cursor: pointer;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
