@@ -8,7 +8,8 @@
       "subtype": "American Pale Ale",
       "image": "28303.jpg",
       "rating": 3.48,
-      "brewery": "Captan Lawrence Brewing Co."
+      "brewery": "Captan Lawrence Brewing Co.",
+      "abv": 0
     },
     {
       "id": 2,
@@ -17,16 +18,78 @@
       "subtype": "vienna lager",
       "image": "104.jpg",
       "rating": 3.74,
-      "brewery": "Boston Beer Company"
+      "brewery": "Boston Beer Company",
+      "abv": 0
     },
     {
       "id": 3,
       "name": "Guinness Draught",
-      "type": "stout",
+      "type": "irish stout",
       "subtype": "dry irish stout",
       "image": "754.jpg",
       "rating": 3.56,
-      "brewery": "Guinness Ltd."
+      "brewery": "Guinness Ltd.",
+      "abv": 0
+    },
+    {
+      "id": 4,
+      "name": "Fat Tire Amber Ale",
+      "type": "amber ale",
+      "subtype": "amercian amber ale",
+      "image": "607.jpg",
+      "rating": 3.6,
+      "brewery": "New Belgium Brewing",
+      "abv": 0
+    },
+    {
+      "id": 5,
+      "name": "Brooklyn Pilsner",
+      "type": "pilsner",
+      "subtype": "german pilsner",
+      "image": "788.jpg",
+      "rating": 3.65,
+      "brewery": "Brooklyn Brewery",
+      "abv": 0
+    },
+    {
+      "id": 6,
+      "name": "Sam Adams Cranberry Lambic",
+      "type": "lambic",
+      "subtype": "fruit beer",
+      "image": "1903.jpg",
+      "rating": 2.67,
+      "brewery": "Boston Beer Company",
+      "abv": 5.9
+    },
+    {
+      "id": 7,
+      "name": "Great Lakes Lake Erie Monster",
+      "type": "imperial ipa",
+      "subtype": "american double / imperial ipa",
+      "image": "18421.jpg",
+      "rating": 4.01,
+      "brewery": "Great Lakes Brewing Co.",
+      "abv": 9.1
+    },
+    {
+      "id": 60,
+      "name": "Bud Light",
+      "type": "light lager",
+      "subtype": "",
+      "image": "1320.jpg",
+      "rating": 1.86,
+      "brewery": "Anheuser-Busch",
+      "abv": 4.2
+    },
+    {
+      "id": 61,
+      "name": "Bud Light Lime",
+      "type": "citrus light lager",
+      "subtype": "",
+      "image": "41821.jpg",
+      "rating": 2.16,
+      "brewery": "Anheuser-Busch",
+      "abv": 0
     }
   ]
 }

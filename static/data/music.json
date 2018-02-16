@@ -1,22 +1,118 @@
 {
-  "pale ale": {
-    "artists": [
-      {
-        "artistid": 4682,
-        "name": "Paul McCartney"
-      }
-    ]
-  },
-  "lager": {
-    "artists": [
+  "artists": [
+    {
+      "artistid": 4682,
+      "name": "Paul McCartney"
+    },
+    {
+      "artistid": 972,
+      "name": "John Lennon"
+    },
+    {
+      "artistid": 39467,
+      "name": "The Rolling Stones"
+    },
+    {
+      "artistid": 5041,
+      "name": "Elton John"
+    },
+    {
+      "artistid": 58402,
+      "name": "The Doors"
+    },
+    {
+      "artistid": 5421,
+      "name": "Bob Marley & the Wailers"
+    },
+    {
+      "artistid": 496,
+      "name": "The Skatalites"
+    },
+    {
+      "artistid": 2355,
+      "name": "The Specials"
+    },
+    {
+      "artistid": 40680,
+      "name": "Madness"
+    },
+    {
+      "artistid": 40473,
+      "name": "Nirvana"
+    },
+    {
+      "artistid": 2136,
+      "name": "Soundgarden"
+    },
+    {
+      "artistid": 44757,
+      "name": "Alice in Chains"
+    },
+    {
+      "artistid": 6765,
+      "name": "Pearl Jam"
+    },
+    {
+      "artistid": 42050,
+      "name": "Soft Cell"
+    },
+    {
+      "artistid": 27729,
+      "name": "The Human League"
+    },
+    {
+      "artistid": 205,
+      "name": "A Flock of Seagulls"
+    },
+    {
+      "artistid": 2152,
+      "name": "Duran Duran"
+    },
+    {
+      "artistid": 35390,
+      "name": "a-ha"
+    },
+    {
+      "artistid": 1823,
+      "name": "The Dubliners"
+    },
+    {
+      "artistid": 23664,
+      "name": "The Clancy Brothers"
+    },
+    {
+      "artistid": 41556,
+      "name": "The Irish Rovers"
+    },
+    {
+      "artistid": 81030,
+      "name": "Dropkick Murphys"
+    },
+    {
+      "artistid": 13258,
+      "name": "Flogging Molly"
+    },
+    {
+      "artistid": 59011,
+      "name": "The Pogues"
+    },
+    {
+      "artistid": 58772,
+      "name": "Kid Rock"
+    },
+    {
+      "artistid": 29083,
+      "name": "Luke Bryan"
+    },
+    {
+      "artistid": 504282,
+      "name": "Florida Georgia Line"
+    },
+    {
+      "artistid": 31894,
+      "name": "George Strait"
+    }
 
-    ]
-  },
-  "stout": {
-    "artists": [
-      {
-
-      }
-    ]
-  }
+  ]
 }
+
