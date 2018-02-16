@@ -12,16 +12,6 @@
       "abv": 0
     },
     {
-      "id": 2,
-      "name": "Samuel Adams Boston Lager",
-      "type": "lager",
-      "subtype": "vienna lager",
-      "image": "104.jpg",
-      "rating": 3.74,
-      "brewery": "Boston Beer Company",
-      "abv": 0
-    },
-    {
       "id": 3,
       "name": "Guinness Draught",
       "type": "irish stout",
@@ -29,7 +19,7 @@
       "image": "754.jpg",
       "rating": 3.56,
       "brewery": "Guinness Ltd.",
-      "abv": 0
+      "abv": 4.2
     },
     {
       "id": 4,
@@ -39,17 +29,7 @@
       "image": "607.jpg",
       "rating": 3.6,
       "brewery": "New Belgium Brewing",
-      "abv": 0
-    },
-    {
-      "id": 5,
-      "name": "Brooklyn Pilsner",
-      "type": "pilsner",
-      "subtype": "german pilsner",
-      "image": "788.jpg",
-      "rating": 3.65,
-      "brewery": "Brooklyn Brewery",
-      "abv": 0
+      "abv": 5.2
     },
     {
       "id": 6,

@@ -11,10 +11,8 @@ export default class ArtistComponent extends React.Component {
     constructor (props) {
         super(props);
 
-        //http://i.iheart.com/v3/catalog/artist/30960173?ops=fit(200,0)
-        this.image_path = `http://i.iheart.com/v3/catalog/artist/${this.props.artistid}`;
-        //https://www.iheart.com/artist/french-montana-281545/
-        this.url = `https://www.iheart.com/artist/-${this.props.artistid}`;
+        // this.image_path = `http://i.iheart.com/v3/catalog/artist/${this.props.artistid}`;
+        // this.url = `https://www.iheart.com/artist/-${this.props.artistid}`;
 
         this.handleClick = this.handleClick.bind(this);
     }
@@ -22,8 +20,10 @@ export default class ArtistComponent extends React.Component {
     handleClick(_event) {
         _event.preventDefault();
 
+        let url = `https://www.iheart.com/artist/-${this.props.artistid}`;
+
         window.open(
-            this.url,
+            url,
             "_iheart_window"
         );
 
@@ -32,10 +32,12 @@ export default class ArtistComponent extends React.Component {
 
     render() {
 
+        let image_path = `http://i.iheart.com/v3/catalog/artist/${this.props.artistid}`;
+
         return <figure className="component-artist">
             <div className="thumb-container">
                 <a href="#" onClick={this.handleClick}>
-                    <img src={this.image_path} />
+                    <img src={image_path} />
                 </a>
             </div>
             <figcaption>
