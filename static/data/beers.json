@@ -2,15 +2,6 @@
   "title": "the beer list",
   "beers": [
     {
-      "id": 0,
-      "name": "TEST",
-      "type": "TEST",
-      "subtype": "",
-      "image": "",
-      "rating": 0,
-      "brewery": "TEST"
-    },
-    {
       "id": 1,
       "name": "Captan Lawrence Freschester Pale Ale",
       "type": "pale ale",

@@ -1,0 +1,22 @@
+{
+  "pale ale": {
+    "artists": [
+      {
+        "artistid": 4682,
+        "name": "Paul McCartney"
+      }
+    ]
+  },
+  "lager": {
+    "artists": [
+
+    ]
+  },
+  "stout": {
+    "artists": [
+      {
+
+      }
+    ]
+  }
+}
