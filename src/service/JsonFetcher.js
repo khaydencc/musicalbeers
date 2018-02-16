@@ -19,6 +19,32 @@ class JsonFetcher {
         });
     }
 
+    pairingList() {
+        let url = `${this.data_path}/pairings.json`;
+
+        console.log("pairings url = %o", url);
+
+        return axios({
+            method: 'get',
+            url: url,
+            responseType: 'json'
+        });
+    }
+
+    artistList() {
+        let url = `${this.data_path}/music.json`;
+
+        console.log("music url = %o", url);
+
+        return axios({
+            method: 'get',
+            url: url,
+            responseType: 'json'
+        });
+    }
+
+
+
     photoAlbum(name, path="") {
         let url = `${path}/${name}.json`;
         console.log("[JsonFetcher:photoAlbum:] url = %o", url);
