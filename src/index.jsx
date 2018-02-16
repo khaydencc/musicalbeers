@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../build/sass/styles.scss';
 import User from "service/User";
-import LoginButton from "components/LoginButton";
-import BeerList from "components/BeerList";
+import Configs from "core/config";
+import JsonFetcher from "service/JsonFetcher";
 
-let user = new User();
+// import LoginButton from "components/LoginButton";
+import BeerList from "components/BeerList";
+import ArtistList from "components/ArtistList";
 
 const defaultState = {
-    loggedin: false
+    beers: [],
+    artists: [],
+    pairings: []
 };
+
+let Fetcher = new JsonFetcher(Configs);
 
 class App extends React.Component {
 
@@ -18,43 +24,48 @@ class App extends React.Component {
 
         this.state = defaultState;
 
-        this.getUser = this.getUser.bind(this);
-        this.onStatus = this.onStatus.bind(this);
-    }
+        this.dataLoaded = this.dataLoaded.bind(this);
 
-    getUser () {
-        return user;
-    }
-
-    onStatus(auth) {
-        console.log("[App:onStatus:] auth = %o", auth);
-        if (auth === true) {
-            // set loggedin state
-            this.setState({
-                loggedin: true
-            });
-            
-            // get profile info
-            /*IHR.api.profile.get({
-                success: function(data){
-                    user.setProfile(data);
-                },
-                error: function () {
-                    
-                }
-            });*/
-        }
     }
 
     componentWillMount() {
         console.log("[App:componentWillMount:]");
-        // user.getStatus(this.onStatus);
+    }
+
+    componentDidMount() {
+        // get the json?
+        console.log("[componentDidMount] outer this = %o", this);
+
+        Fetcher.getAll((data) => {
+            console.log("[componentDidMount] inner this = %o", this);
+            console.log("[componentDidMount] data = %o", data);
+            console.log("[componentDidMount] data.pairings['pale ale'] = %o", data.pairings['pale ale']);
+
+            this.dataLoaded(data);
+        });
+    }
+
+    dataLoaded(data) {
+        this.setState(data);
+    }
+
+    fetchBeers() {
+        const request = Fetcher.beerList();
+
+        request.then((result) => {
+            console.log("request SUCCESS! %o", result.data);
+
+            this.setState({
+                beers: result.data.beers
+            });
+        });
     }
 
     render(){
         return(
             <div className="app-container">
-                <BeerList/>
+                <BeerList beers={this.state.beers}/>
+                <ArtistList/>
             </div>
         )
     }

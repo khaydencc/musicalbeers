@@ -7,19 +7,23 @@ let Fetcher = new JsonFetcher(Configs);
 
 export default class BeerList extends React.Component {
 
+    static defaultProps = {
+        beers: []
+    };
+
     constructor (props) {
         super(props);
 
         this.data_path = `${Configs.base_static_path}${Configs.base_data_path}`;
 
-        this.state = {
+        /*this.state = {
             beers: []
-        };
+        };*/
 
-        this.fetchBeers();
+        // this.fetchBeers();
     }
 
-    fetchBeers() {
+    /*fetchBeers() {
         const request = Fetcher.beerList();
 
         request.then((result) => {
@@ -29,12 +33,12 @@ export default class BeerList extends React.Component {
                 beers: result.data.beers
             });
         });
-    }
+    }*/
 
     render() {
 
         return <div className="component-beerlist">
-            {this.state.beers.map((beer, index, arr) =>
+            {this.props.beers.map((beer, index, arr) =>
                 <BeerComponent
                     {...beer}
                     key={index}/>

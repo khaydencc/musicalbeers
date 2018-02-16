@@ -7,6 +7,29 @@ class JsonFetcher {
         this.data_path = `${this.configs.base_static_path}${this.configs.base_data_path}`;
     }
 
+    getAll(callback) {
+
+        axios.all([
+            this.beerList(),
+            this.artistList(),
+            this.pairingList()
+        ]).then(axios.spread(function(beers, artists, pairings){
+            console.log("[getAll] beers = %o", beers);
+            console.log("[getAll] artists = %o", artists);
+            console.log("[getAll] pairings = %o", pairings);
+
+            let allData = {
+                beers: beers.data.beers,
+                artists: artists.data.artists,
+                pairings: pairings.data.bybeer
+
+            };
+            callback(allData);
+        }));
+
+        return {};
+    }
+
     beerList() {
         let url = `${this.data_path}/beers.json`;
 
