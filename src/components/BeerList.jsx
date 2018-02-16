@@ -1,6 +1,7 @@
 import React from "react";
 import Configs from "core/config";
 import JsonFetcher from "service/JsonFetcher";
+import BeerComponent from "components/BeerComponent";
 
 let Fetcher = new JsonFetcher(Configs);
 
@@ -34,7 +35,9 @@ export default class BeerList extends React.Component {
 
         return <div>
             {this.state.beers.map((beer, index, arr) =>
-                <p key={index}>{beer.name}</p>
+                <BeerComponent
+                    {...beer}
+                    key={index}/>
             )}
         </div>
     }
