@@ -111,7 +111,28 @@
     {
       "artistid": 31894,
       "name": "George Strait"
+    },
+    {
+      "artistid": 16234,
+      "name": "Rush"
+    },
+    {
+      "artistid": 44368,
+      "name": "Justin Bieber"
+    },
+    {
+      "artistid": 39547,
+      "name": "Bryan Adams"
+    },
+    {
+      "artistid": 16230,
+      "name": "Alanis Morissette"
+    },
+    {
+      "artistid": 44512,
+      "name": "Drake"
     }
+
 
   ]
 }

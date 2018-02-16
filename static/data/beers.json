@@ -12,16 +12,6 @@
       "abv": 0
     },
     {
-      "id": 3,
-      "name": "Guinness Draught",
-      "type": "irish stout",
-      "subtype": "dry irish stout",
-      "image": "754.jpg",
-      "rating": 3.56,
-      "brewery": "Guinness Ltd.",
-      "abv": 4.2
-    },
-    {
       "id": 4,
       "name": "Fat Tire Amber Ale",
       "type": "amber ale",
@@ -52,6 +42,26 @@
       "abv": 9.1
     },
     {
+      "id": 3,
+      "name": "Guinness Draught",
+      "type": "irish stout",
+      "subtype": "dry irish stout",
+      "image": "754.jpg",
+      "rating": 3.56,
+      "brewery": "Guinness Ltd.",
+      "abv": 4.2
+    },
+    {
+      "id": 8,
+      "name": "Molson Canadian Lager",
+      "type": "canadian lager",
+      "subtype": "",
+      "image": "1312.jpg",
+      "rating": 2.82,
+      "brewery": "Molson Coors Canada",
+      "abv": 5.0
+    },
+    {
       "id": 60,
       "name": "Bud Light",
       "type": "light lager",
@@ -69,7 +79,17 @@
       "image": "41821.jpg",
       "rating": 2.16,
       "brewery": "Anheuser-Busch",
-      "abv": 0
+      "abv": 4.2
+    },
+    {
+      "id": 62,
+      "name": "Founders KBS",
+      "type": "imperial stout",
+      "subtype": "",
+      "image": "19960.jpg",
+      "rating": 4.61,
+      "brewery": "Founders Brewing Company",
+      "abv": 11.8
     }
   ]
 }
